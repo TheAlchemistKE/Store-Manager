@@ -22,13 +22,15 @@ h1 {
   margin: auto;
   margin-top: 120px;
   background: #1b4f72;
+  color: #fff;
   box-shadow: 0 8px 6px -6px black;
   padding: 10px;
 }
 .user-entry {
   border: none;
   background: inherit;
-  border-bottom: #000 2px solid;
+  border-bottom: #fff 2px solid;
+  color: #fff;
   width: 80%;
   display: block;
 }
