@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Abel|PT+Serif|Playfair+Display");
 body {
-  background: linear-gradient(-90deg, #85c1e9, #3498db);
+  background: #dcdcdc;
+  font-family: "PT Serif", serif;
 }
 .container {
   margin: 0;
@@ -47,6 +48,7 @@ h1 {
   border-radius: 10%;
   background: #2471a3;
   color: #fff;
+  font-weight: bold;
 }
 .submit-btn:hover {
   opacity: 0.6;
