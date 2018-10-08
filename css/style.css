@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|PT+Serif|Playfair+Display");
+body {
+  background: #dcdcdc;
+  font-family: "PT Serif", serif;
+}
+.container {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+header {
+  padding: 10px;
+}
+h1 {
+  margin: 0;
+  font-size: 22px;
+  font-family: "Playfair Display", sans-serif;
+  display: inline;
+}
+#login-attendant {
+  width: 400px;
+  height: 250px;
+  margin: auto;
+  margin-top: 120px;
+  background: #1b4f72;
+  color: #fff;
+  box-shadow: 0 8px 6px -6px black;
+  padding: 10px;
+}
+h3 {
+  text-align: center;
+}
+.user-entry {
+  border: none;
+  background: inherit;
+  border-bottom: #fff 2px solid;
+  color: #fff;
+  width: 80%;
+  display: block;
+}
+.user-entry:focus {
+  outline: none;
+}
+.btn {
+  text-align: center;
+}
+.submit-btn {
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 3%;
+  padding: 10px 15px;
+  border-radius: 10%;
+  background: #2471a3;
+  color: #fff;
+  font-weight: bold;
+}
+.submit-btn:hover {
+  opacity: 0.6;
+}
