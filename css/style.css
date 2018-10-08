@@ -19,13 +19,16 @@ h1 {
 }
 #login-attendant {
   width: 400px;
-  height: 200px;
+  height: 250px;
   margin: auto;
   margin-top: 120px;
   background: #1b4f72;
   color: #fff;
   box-shadow: 0 8px 6px -6px black;
   padding: 10px;
+}
+h3 {
+  text-align: center;
 }
 .user-entry {
   border: none;
@@ -43,7 +46,9 @@ h1 {
 }
 .submit-btn {
   border: none;
-  margin-top: 2%;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 3%;
   padding: 10px 15px;
   border-radius: 10%;
   background: #2471a3;
