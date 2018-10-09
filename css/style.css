@@ -1,14 +1,18 @@
+/**Login Page**/
+/**Global Stylings**/
 @import url("https://fonts.googleapis.com/css?family=Abel|PT+Serif|Playfair+Display");
 body {
-  background: #dcdcdc;
+  background: #f4f3f4;
   font-family: "PT Serif", serif;
-}
-.container {
   margin: 0;
   padding: 0;
+}
+.container {
+  width: 100%;
   line-height: 1.5;
 }
-header {
+/**Local Styling**/
+#branding {
   padding: 10px;
 }
 h1 {
@@ -25,7 +29,7 @@ h1 {
   background: #1b4f72;
   color: #fff;
   box-shadow: 0 8px 6px -6px black;
-  padding: 10px;
+  padding: 15px;
 }
 h3 {
   text-align: center;
@@ -35,7 +39,7 @@ h3 {
   background: inherit;
   border-bottom: #fff 2px solid;
   color: #fff;
-  width: 80%;
+  width: 100%;
   display: block;
 }
 .user-entry:focus {
@@ -57,4 +61,77 @@ h3 {
 }
 .submit-btn:hover {
   opacity: 0.6;
+}
+/**Products Page**/
+/**Nav Bar**/
+.navbar {
+  background: #aba6bf;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 60px;
+  box-shadow: 0 4px 3px #ccc;
+}
+.heading {
+  float: left;
+  padding: 10px 5px;
+}
+
+nav {
+  float: right;
+}
+
+/**Side Bar**/
+.sidebar {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  width: 20%;
+  overflow: auto;
+  position: fixed;
+  height: 60%;
+  background: #aba6bf;
+}
+.sidebar a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.side-link {
+  border-bottom: #000 1px solid;
+}
+.sidebar a.active {
+  background: #808080;
+  border-bottom: none;
+  color: #fff;
+}
+.sidebar a:hover:not(.active) {
+  background-color: #808080;
+  color: #fff;
+}
+.category-list {
+  display: none;
+  background: #f2f2f2;
+  padding: 8px;
+}
+.fa-caret-down {
+  float: right;
+}
+.row {
+  padding-top: 10px;
+  width: 70%;
+  height: 70%;
+  float: right;
+}
+.product {
+  width: 20%;
+  padding: 5px 10px;
+  display: inline-flex;
+}
+.product-img {
+  width: 200px;
+  height: 200px;
+  border: #000 1px solid;
+  box-shadow: 5px 5px 3px #ccc;
 }
