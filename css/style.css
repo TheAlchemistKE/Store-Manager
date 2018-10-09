@@ -1,14 +1,18 @@
+/**Login Page**/
+/**Global Stylings**/
 @import url("https://fonts.googleapis.com/css?family=Abel|PT+Serif|Playfair+Display");
 body {
   background: #dcdcdc;
   font-family: "PT Serif", serif;
-}
-.container {
   margin: 0;
   padding: 0;
+}
+.container {
+  width: 100%;
   line-height: 1.5;
 }
-header {
+/**Local Styling**/
+#branding {
   padding: 10px;
 }
 h1 {
@@ -57,4 +61,76 @@ h3 {
 }
 .submit-btn:hover {
   opacity: 0.6;
+}
+/**Products Page**/
+/**Nav Bar**/
+.navbar {
+  background: rgb(250, 235, 215);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 60px;
+  box-shadow: 0 4px 3px #ccc;
+}
+ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+ul li a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 10px;
+}
+.heading {
+  float: left;
+  padding: 10px 5px;
+}
+
+nav {
+  float: right;
+}
+
+/**Side Bar**/
+.sidebar {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  width: 20%;
+  overflow: auto;
+  position: fixed;
+  height: 50%;
+  background: #1b4f72;
+}
+.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.side-link {
+  border-bottom: #fff 1px solid;
+}
+.sidebar a.active {
+  background: #808080;
+  border-bottom: none;
+  color: #fff;
+}
+.sidebar a:hover:not(.active) {
+  background-color: #808080;
+  color: #fff;
+}
+.row {
+  padding-top: 10px;
+  width: 70%;
+  height: 70%;
+  float: right;
+}
+.product {
+  width: 20%;
+  padding: 5px 10px;
+  display: inline-flex;
+}
+.product-img {
+  width: 200px;
+  height: 200px;
 }
