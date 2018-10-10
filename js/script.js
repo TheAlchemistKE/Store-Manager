@@ -11,12 +11,14 @@ for (k = 0; k < category.length; k++) {
     }
   });
 }
-document
-  .getElementsByClassName("open-details")
-  .addEventListener("click", function() {
+
+var open_details = document.getElementsByClassName("open-details");
+var list;
+for (list = 0; list < open_details.length; list++) {
+  open_details[list].addEventListener("click", function() {
     document.querySelector(".modal").style.display = "flex";
   });
-//Modal Close code...
-document.getElementsByClassName("close").addEventListener("click", function() {
+} 
+document.querySelector(".close").addEventListener("click", function() {
   document.querySelector(".modal").style.display = "none";
 });

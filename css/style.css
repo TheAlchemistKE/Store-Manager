@@ -83,7 +83,27 @@ h3 {
 nav {
   float: right;
 }
-
+.search {
+  width: 100px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-right: 15px;
+  border-radius: 15px;
+  border: none;
+  display: inline-block;
+  transition: width ease-in-out 0.7s;
+}
+.search:focus {
+  width: 200px;
+  outline: none;
+  background-color: #fff;
+}
+.search::placeholder {
+  font-size: 16px;
+  font-style: italic;
+  font-family: "PT Serif", sans-serif;
+  color: #000;
+}
 /**Side Bar**/
 .sidebar {
   margin: 0;
@@ -147,20 +167,21 @@ nav {
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 .outline {
   width: 70%;
   height: 350px;
   background: #f2fff2;
-  margin: auto;
+  margin: 0;
   padding: 20px;
   position: relative;
   border: #000000 1px solid;
   border-radius: 4px;
 }
 .close {
-  font-size: 20px;
+  font-size: 40px;
+  transform: rotate(45deg);
   display: block;
   cursor: pointer;
   position: absolute;
