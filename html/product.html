@@ -18,7 +18,7 @@
         <div class="container">
             <div class="heading">
                 <i class="fas fa-layer-group fa-2x"></i>
-                <h1>Store Manager</h1>
+                <h1><a href="../index.html" class="logo-heading">Store Manager</a></h1>
             </div>
             <nav>
             </nav>
@@ -39,61 +39,81 @@
     </div>
     <div class="row">
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
     </div>
     <div class="row">
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
     </div>
     <div class="row">
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
         <div class="product">
-            <a href="https://placeholder.com"><img src="../img/image.png" class="product-img"></a>
+            <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
         </div>
     </div>
-    <script>
-        var category = document.getElementsByClassName('list-categories');
-        var k;
-        for (k = 0; k < category.length; k++) {
-            category[k].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var categoryList = this.nextElementSibling;
-                if (categoryList.style.display === "block") {
-                    categoryList.style.display = "none";
-                } else {
-                    categoryList.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <div class="product-details">
+        <div class="container">
+            <div class="single-product">
+
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="outline">
+            <i class="fas fa-times close"></i>
+            <div class="block">
+                <div class="basic-info">
+                    <h3>Product</h3>
+                    <img src="../img/image.png" alt="This is a placeholder text." class="image">
+                </div>
+                <div class="user-relevant">
+                    <h3>Price: <span>Ksh. 1000</span></h3>
+                    <p>Acceptable Minimum: 50 pieces</p>
+                    <button class="add">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="details">
+                <h3>Product Details</h3>
+                <p contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                    iure itaque animi
+                    cumque similique,
+                    delectus nisi vel error ad magni consequatur. Odio officia accusantium aut ipsam eius repellendus
+                    aspernatur? Repellat!</p>
+            </div>
+            <button class="btn-delete">Delete Item</button>
+            <button class="btn-edit">Edit Info</button>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
