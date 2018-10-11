@@ -141,6 +141,10 @@ nav {
 .fa-caret-down {
   float: right;
 }
+.products {
+  position: absolute;
+  padding-bottom: 5%;
+}
 .row {
   padding-top: 10px;
   width: 70%;
@@ -159,6 +163,12 @@ nav {
   height: 200px;
   border: #000 1px solid;
   box-shadow: 5px 5px 3px #ccc;
+}
+.btn-add-product {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .modal {
   width: 100%;
