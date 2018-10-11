@@ -12,13 +12,24 @@ for (k = 0; k < category.length; k++) {
   });
 }
 
-var open_details = document.getElementsByClassName("open-details");
-var list;
-for (list = 0; list < open_details.length; list++) {
-  open_details[list].addEventListener("click", function() {
+var images = document.getElementsByClassName("product-img");
+for (var i = 0; i < images.length; i++) {
+  images[i].onclick = function() {
     document.querySelector(".modal").style.display = "flex";
-  });
-} 
+  };
+}
+
 document.querySelector(".close").addEventListener("click", function() {
   document.querySelector(".modal").style.display = "none";
 });
+var delete_item = document.getElementsByClassName("btn-delete");
+
+for (var l = 0; l < delete_item; l++) {
+  delete_item[l].onclick = deleteVal()
+}
+
+function deleteVal() {
+  console.log("rrr");
+  document.querySelector(".modal").style.display = "none";
+  this.parentElement.style.display = "none";
+};
