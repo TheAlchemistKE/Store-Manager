@@ -207,6 +207,9 @@ nav {
   font-weight: bold;
   text-decoration: underline;
 }
+.bold {
+  font-weight: bold;
+}
 .details {
   width: 60%;
   display: inline-block;
@@ -238,6 +241,11 @@ nav {
   background: white;
   color: #000000;
   border: red 2px solid;
+}
+.add:focus,
+.btn-edit:focus,
+.btn-delete:focus {
+  outline: none;
 }
 .btn-edit {
   float: right;
