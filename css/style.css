@@ -203,6 +203,10 @@ nav {
   display: inline-block;
   width: 30%;
 }
+.min {
+  font-weight: bold;
+  text-decoration: underline;
+}
 .details {
   width: 60%;
   display: inline-block;
