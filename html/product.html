@@ -21,9 +21,9 @@
                 <h1><a href="../index.html" class="logo-heading">Store Manager</a></h1>
             </div>
             <nav>
-                <!--
+
                 <input type="text" name="search" placeholder="Search..." class="search">
-                -->
+
             </nav>
         </div>
     </header>
@@ -94,11 +94,11 @@
             <div class="close">+</div>
             <div class="block">
                 <div class="basic-info">
-                    <h3>Product</h3>
+                    <h3 contenteditable="true">Product Name</h3>
                     <img src="../img/image.png" alt="This is a placeholder text." class="image">
                 </div>
                 <div class="user-relevant">
-                    <h3>Price: <span>Ksh. 1000</span></h3>
+                    <h3 contenteditable="true">Price: <span contenteditable="true">Ksh. 1000</span></h3>
                     <p>Acceptable Minimum: 50 pieces</p>
                     <button class="add">Add to Cart</button>
                 </div>
@@ -112,11 +112,11 @@
                     delectus nisi vel error ad magni consequatur. Odio officia accusantium aut ipsam eius repellendus
                     aspernatur? Repellat!</p>
             </div>
-            <button class="btn-delete">Delete Item</button>
+            <button class="btn-delete" onclick="deleteDiv(this)">Delete Item</button>
             <button class="btn-edit">Edit Info</button>
         </div>
     </div>
-    <script src="../js/script.js">
+    <script src="../js/script.js"></script>
 
 
 
