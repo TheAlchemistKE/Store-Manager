@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <header class="navbar">
+        <div class="container">
+            <div class="heading">
+                <i class="fas fa-layer-group fa-2x"></i>
+                <h1><a href="../index.html" class="logo-heading">Store Manager</a></h1>
+            </div>
+            <nav>
+
+                <input type="text" name="search" placeholder="Search..." class="search">
+
+            </nav>
+        </div>
+    </header>
+    <!--Side Navigation-->
+    <div class="sidebar">
+        <a href="product.html" class="side-link">Products</a>
+        <a href="#" class="side-link list-categories">Categories<i class="fas fa-caret-down"></i></a>
+        <div class="category-list">
+            <a href="product.html">Category 1</a>
+            <a href="product.html">Category 2</a>
+            <a href="product.html">Category 3</a>
+        </div>
+        <a href="sales_records.html" class="side-link">Sales Records</a>
+        <a href="cart.html" class="side-link">Cart</a>
+        <a href="dashboard.html" class="side-link active">My Dashboard</a>
+    </div>
+    <div class="dash">
+        <div class="section1">
+            <img src="../img/user.svg" alt="An icon of a user" class="avatar">
+            <h2 class="welcome-msg">Welcome To your Dashboard</h2>
+        </div>
+        <div class="section2">
+            <figure class="dash-item item-left">
+                <a href="../html/sales_records.html"><img src="../img/sales_records.svg" alt="A sales icon"></a>
+                <figcaption>Sales Records</an>
+            </figure>
+            <figure class="dash-item item-right">
+                <a href="users.html" id="user-trigger"><img src="../img/users.svg" alt="A sales icon"></a>
+                <figcaption>Users</figcaption>
+            </figure>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

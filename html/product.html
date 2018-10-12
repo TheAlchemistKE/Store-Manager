@@ -1,13 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Products</title>
 </head>
+
 <body>
-    
-    
+    <!--Navigation Bar-->
+    <header class="navbar">
+        <div class="container">
+            <div class="heading">
+                <i class="fas fa-layer-group fa-2x"></i>
+                <h1><a href="../index.html" class="logo-heading">Store Manager</a></h1>
+            </div>
+            <nav>
+
+                <input type="text" name="search" placeholder="Search..." class="search">
+
+            </nav>
+        </div>
+    </header>
+    <!--Side Navigation-->
+    <div class="sidebar">
+        <a href="#" class="active side-link">Products</a>
+        <a href="#" class="side-link list-categories">Categories<i class="fas fa-caret-down"></i></a>
+        <div class="category-list">
+            <a href="product.html">Category 1</a>
+            <a href="product.html">Category 2</a>
+            <a href="product.html">Category 3</a>
+        </div>
+        <a href="sales_records.html" class="side-link">Sales Records</a>
+        <a href="cart.html" class="side-link">Cart</a>
+        <a href="dashboard.html" class="side-link">My Dashboard</a>
+    </div>
+    <div class="products">
+        <div class="row">
+
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+            <div class="product">
+                <a href="#" class="open-details"><img src="../img/image.png" class="product-img"></a>
+                <button class="btn-delete">Delete Item</button>
+            </div>
+        </div>
+        <button class="add btn-add-product" id="add-product">Add Product</button>
+    </div>
+
+    <div class="product-details">
+        <div class="container">
+            <div class="single-product">
+
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="outline">
+            <div class="close">+</div>
+            <div class="block">
+                <div class="basic-info">
+                    <h3 contenteditable="true">Product Name</h3>
+                    <img src="../img/image.png" alt="This is a placeholder text." class="image">
+                </div>
+                <div class="user-relevant">
+                    <h3 contenteditable="true">Price: <span contenteditable="true">Ksh. 1000</span></h3>
+                    <p>Acceptable Minimum: <span class="bold"> 50 pieces</span></p>
+                    <p class="min">*Pieces in Stock: 100</p>
+                    <button class="add">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="details">
+                <h3>Product Details</h3>
+                <p contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                    iure itaque animi
+                    cumque similique,
+                    delectus nisi vel error ad magni consequatur. Odio officia accusantium aut ipsam eius repellendus
+                    aspernatur? Repellat!</p>
+            </div>
+            <button class="btn-delete">Delete Item</button>
+            <button class="btn-edit">Edit Info</button>
+        </div>
+    </div>
+    <div class="modal2">
+        <div class="close white">+</div>
+        <div class="product-description">
+            <h3>Add New Product</h3>
+            <input type="text" name="prdct-name" id="prod" class="product-entry" placeholder="Product Name">
+            <input type="text" name="prdct-name" id="prod" class="product-entry" placeholder="Product Price">
+            <input type="text" name="prdct-name" id="prod" class="product-entry" placeholder="Minimum acceptable quantity.">
+            <textarea name="description" id="more-info" cols="30" rows="10" placeholder="Describe the product..."></textarea>
+            <input type="submit" value="Add Product" class="add">
+        </div>
+
+    </div>
+    <script src="../js/script.js"></script>
+    </script>
 </body>
+
 </html>
