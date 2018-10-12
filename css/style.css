@@ -354,5 +354,5 @@ tr:nth-child(odd) {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 5px;
+  margin: 300px 10px;
 }
