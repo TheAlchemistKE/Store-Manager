@@ -37,6 +37,3 @@ function deleteVal() {
 document.getElementById("add-product").addEventListener("click", function() {
   document.querySelector(".modal2").style.display = "flex";
 });
-document.queryCommandValue(".close").addEventListener("click", function() {
-  document.querySelector.style.display = "none";
-});
