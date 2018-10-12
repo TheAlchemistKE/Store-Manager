@@ -96,7 +96,7 @@
                 <button class="btn-delete">Delete Item</button>
             </div>
         </div>
-        <button class="add btn-add-product">Add Product</button>
+        <button class="add btn-add-product" id="add-product">Add Product</button>
     </div>
 
     <div class="product-details">
@@ -135,6 +135,15 @@
         </div>
     </div>
     <div class="modal2">
+        <div class="close white">+</div>
+        <div class="product-description">
+            <h3>Add New Product</h3>
+            <input type="text" name="prdct-name" id="prod" class="product-entry" placeholder="Product Name">
+            <input type="text" name="prdct-name" id="prod" class="product-entry" placeholder="Product Price">
+            <input type="text" name="prdct-name" id="prod" class="product-entry" placeholder="Minimum acceptable quantity.">
+            <textarea name="description" id="more-info" cols="30" rows="10" placeholder="Describe the product..."></textarea>
+            <input type="submit" value="Add Product" class="add">
+        </div>
 
     </div>
     <script src="../js/script.js"></script>

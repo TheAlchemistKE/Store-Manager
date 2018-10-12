@@ -268,3 +268,28 @@ nav {
   border: #2471a3 2px solid;
 }
 /**Modal Two Styling**/
+.product-description {
+  width: 40%;
+  height: 400px;
+  padding: 20px;
+  background: #f2fff2;
+  display: inline-block;
+  text-align: center;
+}
+.product-entry {
+  width: 80%;
+  display: block;
+  margin-top: 10px;
+  border: none;
+  background: inherit;
+  border-bottom: #000 1px solid;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+}
+#more-info {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+}
