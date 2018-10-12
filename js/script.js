@@ -22,12 +22,12 @@ for (var i = 0; i < images.length; i++) {
 document.querySelector(".close").addEventListener("click", function() {
   document.querySelector(".modal").style.display = "none";
 });
-var delete_item = document.getElementsByClassName("btn-delete");
+/**var delete_item = document.getElementsByClassName("btn-delete");
 
 for (var l = 0; l < delete_item; l++) {
   delete_item[l].onclick = deleteVal();
 }
-/**
+
 function deleteVal() {
   document.querySelector(".modal").style.display = "none";
   this.parentElement.style.display = "none";
