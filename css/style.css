@@ -293,3 +293,21 @@ nav {
   margin-top: 10px;
   border-radius: 4px;
 }
+/**Dashboard Styling**/
+.dash {
+  float: right;
+  width: 70%;
+  text-align: center;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+.welcome-msg {
+  padding: 0;
+  margin: 0;
+}
+.section1 {
+  
+}
