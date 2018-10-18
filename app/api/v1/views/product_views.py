@@ -28,3 +28,15 @@ class ProductList(Resource, ProductOps):
             "Products": self.product_obj.save_product(name, price, category, quantity)
         }
         return make_response(jsonify(resp), 201)
+
+
+class SingleProduct(Resource, ProductOps):
+    def __init__(self):
+        self.object = ProductOps()
+
+    def get(self, product_id):
+        resp = {
+            "Message": "Successful.",
+            "Product": self.object.show_one(product_id)
+        }
+        return make_response(jsonify(resp), 200)
