@@ -1,6 +1,7 @@
 *.coverage
 .DS_Store
 .vscode
+env/
 out
 node_modules
 *.pyc
@@ -14,7 +15,7 @@ npm-debug.log
 !yarn.lock
 coverage/
 .vscode-test/**
-.env*/
+.env
 pythonFiles/experimental/ptvsd/**
 debug_coverage*/**
 languageServer/**
