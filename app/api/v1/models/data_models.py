@@ -3,7 +3,9 @@ from flask_restful import abort
 product_list = []
 sales_list = []
 
-# This is a model for products that specifies how its payload is structured.
+# This is a model for products and sales that specifies how its payload is structured.
+
+
 class ProductOps:
     def __init__(self):
         self.products = product_list
@@ -33,7 +35,7 @@ class ProductOps:
                 return product_item
         return abort(404, message="Product {} does not exist in inventory".format(product_id))
 
-# This is a model for products that specifies how its payload is structured.
+
 class SalesOps():
     def __init__(self):
         self.sales = sales_list
