@@ -30,7 +30,7 @@ class SalesList(Resource, SalesOps):
         }
         return make_response(jsonify(resp), 201)
 
-
+#Get Single Product.
 class SingleSaleRecords(Resource):
     def __init__(self):
         self.records_obj = SalesOps()
