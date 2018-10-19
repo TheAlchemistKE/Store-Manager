@@ -71,4 +71,72 @@ class TestValidInput(unittest.TestCase):
         resp = self.app.get(
             '/api/v1/products/{}'.format(1), content_type=self.content_type)
         self.assertEqual(resp.status_code, 200)
-        
+
+
+class TestEmptyInputs(TestValidInput):
+    # Here the user doesn't fill in certain fields.
+    def test_empty_product_post(self):
+        payload = {
+            "Product Name": "",
+            "Product Price": 200,
+            "Product Category": "Category",
+            "Quantity in Inventory": 50
+        }
+        resp = self.app.post(
+            '/api/v1/products', content_type=self.content_type, data=json.dumps(payload))
+        self.assertEqual(resp.status_code, 400)
+
+    def test_empty_sale_records_post(self):
+        payload = {
+            "Sold By": "Kevin",
+            "Quantity Sold": 200,
+            "Date Created": "",
+            "Price per unit": 30
+        }
+        resp = self.app.post(
+            '/api/v1/sales', content_type=self.content_type, data=json.dumps(payload))
+        self.assertEqual(resp.status_code, 400)
+
+    def test_multiple_empty_fields_products_post(self):
+        payload = {
+            "Product Name": "",
+            "Product Price": "",
+            "Product Category": "",
+            "Quantity in Inventory": 50
+        }
+        resp = self.app.post(
+            '/api/v1/products', content_type=self.content_type, data=json.dumps(payload))
+        self.assertEqual(resp.status_code, 400)
+
+    def test_multiple_empty_fields_sales_post(self):
+        payload = {
+            "Sold By": "",
+            "Quantity Sold": 200,
+            "Date Created": "",
+            "Price per unit": ""
+        }
+        resp = self.app.post(
+            '/api/v1/sales', content_type=self.content_type, data=json.dumps(payload))
+        self.assertEqual(resp.status_code, 400)
+
+
+class TestExtremeCases(TestValidInput):
+    def test_missing_fields_post_product(self):
+        payload = {
+            "Product Category": "Category",
+            "Quantity in Inventory": 50
+        }
+        resp = self.app.post(
+            '/api/v1/products', content_type=self.content_type, data=json.dumps(payload))
+        self.assertEqual(resp.status_code, 400)
+
+    def test_missing_fields_post_sales(self):
+        payload = {
+            "Sold By": "",
+            "Quantity Sold": 200,
+            "Date Created": "",
+            "Price per unit": ""
+        }
+        resp = self.app.post(
+            '/api/v1/sales', content_type=self.content_type, data=json.dumps(payload))
+        self.assertEqual(resp.status_code, 400)
