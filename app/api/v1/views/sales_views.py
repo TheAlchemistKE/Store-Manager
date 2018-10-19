@@ -3,6 +3,7 @@ from flask_restful import Resource, reqparse
 
 # Local Imports
 from ..models.data_models import SalesOps
+from ..utils.validator import sales_validator
 
 sales_obj = SalesOps()
 
@@ -30,13 +31,18 @@ class SalesList(Resource, SalesOps):
         sales_date = data['Date Created']
         unit_price = data['Price per unit']
 
-        resp = {
-            "Message": "Created.",
-            "Status": "OK",
-            "Sales Records": sales_obj.save_sales_record(sales_by, quantity_sold, sales_date, unit_price)
-        }
-        return make_response(jsonify(resp), 201)
-
+        validate = sales_validator(data)
+        
+        if validate == "OK":
+            resp = {
+                "Message": "Created.",
+                "Status": "OK",
+                "Sales Records": sales_obj.save_sales_record(sales_by, quantity_sold, sales_date, unit_price)
+            }
+            return make_response(jsonify(resp), 201)
+        else:
+            return validate
+        
 # Get Single Product.
 
 

@@ -11,3 +11,13 @@ def product_validator(data):
     
     else:
         return "OK"
+
+def sales_validator(data):
+    if bool(data['Sold By']) != True:
+       return jsonify({"message": "Product Name cannot be empty."})
+
+    elif bool(data['Date Created']) != True:
+        return jsonify({"message": "Product Category cannot be empty."})
+    
+    else:
+        return "OK"
