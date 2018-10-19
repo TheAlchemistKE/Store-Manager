@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, Blueprint, request, make_response
-from flask_restful import Api, Resource
+from flask import jsonify, request, make_response
+from flask_restful import Resource
 
 # Local Imports
 from ..models.data_models import SalesOps
