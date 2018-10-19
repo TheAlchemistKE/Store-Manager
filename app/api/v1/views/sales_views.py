@@ -1,9 +1,16 @@
 from flask import jsonify, request, make_response
-from flask_restful import Resource
+from flask_restful import Resource, reqparse
 
 # Local Imports
 from ..models.data_models import SalesOps
+
 sales_obj = SalesOps()
+
+parser = reqparse.RequestParser()
+parser.add_argument("Sold By", type=str, required=True, help="Sold By required.")
+parser.add_argument("Quantity Sold", type=int, required=True, help="Quantity Sold required.")
+parser.add_argument("Date Created", type=str, required=True, help="Date Created required.")
+parser.add_argument("Price per unit", type=int, required=True, help="Price per unit required.")
 
 
 class SalesList(Resource, SalesOps):
@@ -17,7 +24,7 @@ class SalesList(Resource, SalesOps):
         return make_response(jsonify(resp), 200)
 
     def post(self):
-        data = request.get_json()
+        data = parser.parse_args(strict=True)
         sales_by = data['Sold By']
         quantity_sold = data['Quantity Sold']
         sales_date = data['Date Created']
