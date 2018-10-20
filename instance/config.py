@@ -1,6 +1,7 @@
 class Config(object):
     DEBUG = False
     TESTING = False
+    JWT_SECRET_KEY = 'Veritasistruth'
 
 
 class DevelopmentConfig(Config):
