@@ -1,10 +1,6 @@
 from flask_restful import reqparse
 from flask import jsonify, make_response
-import passlib
-
-
-
-
+from passlib.hash import pbkdf2_sha256 as sha256
 
 
 parser = reqparse.RequestParser()
@@ -22,17 +18,8 @@ def authenticate():
 
 
 class Users():
-    def __init__(self, name, username, email, password):
-        self.name = name
-        self.username = username
-        self.email = email
-        self.password = password
 
-    def signup(self):
-        user_data = parser.parse_args()
-        username = user_data["username"]
-        password = user_data["password"]
-
+    def signup(self, username, password):
         user_payload = {
             "Id": len(users)+1,
             "Username": username,
@@ -46,6 +33,14 @@ class Users():
                 return user
             else:
                 return make_response(jsonify({"message": "User not found."}), 404)
+
+    @staticmethod
+    def generate_password_hash(password):
+        return sha256.hash(password)
+
+    @staticmethod
+    def verify_password_hash(password, hash):
+        return sha256.verify(password, hash)
 
     def logout(self):
         pass
