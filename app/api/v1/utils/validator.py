@@ -5,6 +5,8 @@ from flask import jsonify, make_response
 def product_validator(data):
     if bool(data["Product Name"]) != True:
         return make_response(jsonify({"message": "Product Name cannot be empty."}), 400)
+    elif type(data["Product Name"]) == int:
+        return make_response(jsonify({"message": "Product Name should be a string."}), 400)
 
     elif bool(data["Product Category"]) != True:
         return make_response(jsonify({"message": "Product Category cannot be empty."}), 400)
