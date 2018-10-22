@@ -24,9 +24,7 @@ class UserRegistration(Resource):
         password = data["Password"]
 
         # result = user_object.register_user(name, username, password)
-      
-     
-       
+
         try:
             result = user_object.register_user(name, username, password)
             auth_token = create_access_token(identity=username)
@@ -39,19 +37,18 @@ class UserRegistration(Resource):
 
             }
             return token_resp
-            
+
         except:
             return {"Message": "Something's a bit off."}, 500
-        
 
-       
 
 class UserLogin(Resource):
     def post(self):
         data = parser.parse_args()
+        print(data)
         username = data["Username"]
         password = data["Password"]
-        
+
         if user_object.login(username, password) == True:
             resp = {
                 "Message": "Logged in as {}".format(username),
@@ -61,10 +58,6 @@ class UserLogin(Resource):
             return resp
         else:
             return {"Message": "Please enter correct credentials."}
-
-
-        
-
 
 
 class AllUsers(Resource):
