@@ -33,9 +33,9 @@ class User():
         return self.users
 
     def login(self, username, password):
-        for user in self.users:
-            if (user["Username"] == username) and (user["Password"] == User.generate_password_hash(password)):
-                return True
-            else:
-                return False
-#   return next((item for item in users if item["username"] == username), False)
+        result = next(
+            (item for item in user_list if item["Username"] == username), False)
+        if result == False:
+            return False
+        return sha256.verify(password, result['Password'])
+        

@@ -1,6 +1,6 @@
 from flask_restful import reqparse, Resource
-from flask_jwt_extended import (create_access_token, jwt_required, create_refresh_token,
-                                jwt_refresh_token_required, get_raw_jwt, get_jwt_identity)
+from flask_jwt_extended import create_access_token, create_refresh_token
+                               
 # Local Imports
 from ..models.user_model import User
 
@@ -45,7 +45,6 @@ class UserRegistration(Resource):
 class UserLogin(Resource):
     def post(self):
         data = parser.parse_args()
-        print(data)
         username = data["Username"]
         password = data["Password"]
 
