@@ -23,26 +23,48 @@ class UserRegistration(Resource):
         username = data["Username"]
         password = data["Password"]
 
+        # result = user_object.register_user(name, username, password)
+      
+     
+       
         try:
+            result = user_object.register_user(name, username, password)
             auth_token = create_access_token(identity=username)
             renewal_token = create_refresh_token(identity=username)
             token_resp = {
                 "message": "User successfully created.",
                 "Token": auth_token,
-                "New Token": renewal_token
+                "New Token": renewal_token,
+                "user": result
+
             }
             return token_resp
+            
         except:
             return {"Message": "Something's a bit off."}, 500
+        
 
-        resp = {
-            "message": "Successful registration!",
-            "User Details": user_object.register_user(name, username, password)
-        }
-        return resp
+       
 
 class UserLogin(Resource):
-    
+    def post(self):
+        data = parser.parse_args()
+        username = data["Username"]
+        password = data["Password"]
+        
+        if user_object.login(username, password) == True:
+            resp = {
+                "Message": "Logged in as {}".format(username),
+                "Authorization_Token": create_access_token(identity=username),
+                "New Auth Token": create_refresh_token(identity=username)
+            }
+            return resp
+        else:
+            return {"Message": "Please enter correct credentials."}
+
+
+        
+
 
 
 class AllUsers(Resource):

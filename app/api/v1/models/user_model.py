@@ -1,7 +1,12 @@
 from flask_restful import reqparse
 from passlib.hash import pbkdf2_sha256 as sha256
 
-user_list = []
+# user_list = []
+user_list = [{
+    "Name": "testmeme",
+            "Username": "testme",
+            "Password": sha256.hash('password')
+}]
 
 
 class User():
@@ -18,7 +23,7 @@ class User():
 
         self.users.append(user_payload)
 
-        return user_payload
+        return self.users
 
     @staticmethod
     def generate_password_hash(password):
@@ -33,13 +38,8 @@ class User():
 
     def login(self, username, password):
         for user in self.users:
-            if user["Username"] == username and User.verify_password_hash(password, user["Password"]):
-                resp = {
-                    "message": "Successful login."
-                }
-                return resp
-            else:
-                respnse = {
-                    "message": "Failed to login."
-                }
-                return respnse
+           if (user["Username"] == user) and (user["Password"] == User.generate_password_hash(password)):
+               return True
+           else:
+               return False
+#   return next((item for item in users if item["username"] == username), False)
