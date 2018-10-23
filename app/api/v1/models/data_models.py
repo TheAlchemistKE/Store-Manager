@@ -3,6 +3,8 @@ from flask_restful import abort
 product_list = []
 sales_list = []
 
+# This is a model for products and sales that specifies how its payload is structured.
+
 
 class ProductOps:
     def __init__(self):
