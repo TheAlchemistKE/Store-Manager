@@ -11,11 +11,6 @@ class ProductOps:
         self.products = product_list
 
     def save_product(self, name, price, category, quantity):
-        params = [name, category]
-        for param in params:
-            if bool(param) is False:
-                return make_response(jsonify({"Message": "{} cannot be null.".format(param)}), 406)
-
         payload = {
             "Id": len(self.products)+1,
             "Product Name": name,
