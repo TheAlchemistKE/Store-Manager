@@ -57,15 +57,15 @@ class TestValidInput(unittest.TestCase):
                                     data=json.dumps(payload),
                                     headers={
                                         "Authorization": "Bearer " + self.user_login()},
-                                    content_type='application/json')
-        self.assertEqual(response.status_code, 201)
-
-    def test_get_products(self):
-        response = self.client.get('api/v1/products',
+                                    contesponse = self.client.get('api/v1/products',
                                     headers={
                                         "Authorization": "Bearer " + self.user_login()},
                                     content_type='application/json')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200)ent_type='application/json')
+        self.assertEqual(response.status_code, 201)
+
+    def test_get_products(self):
+        r
 
     def test_get_sales(self):
         response = self.client.get('api/v1/products',
