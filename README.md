@@ -1,10 +1,11 @@
 [![Build Status](https://travis-ci.com/KelynPNjeri/Store-Manager.svg?branch=ft-get-specific-record-161330910)](https://travis-ci.com/KelynPNjeri/Store-Manager)
 [![Coverage Status](https://coveralls.io/repos/github/KelynPNjeri/Store-Manager/badge.svg?branch=ft-get-specific-record-161330910)](https://coveralls.io/github/KelynPNjeri/Store-Manager?branch=ft-get-specific-record-161330910)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e61d01314f80973dd647/maintainability)](https://codeclimate.com/github/KelynPNjeri/Store-Manager/maintainability)
-# Store-Manager
-Store Manager is a web app that helps store owners manage sales and product inventory records.
+# Store-Manager API
+These endpoints allow a user to perform a variety of functions clearly illustratrated in the table below such as displaying all the products in the inventory among other functions. 
 
 ### API ENDPOINTS
+
 
 <table class="tg">
   <tr>
@@ -53,4 +54,16 @@ Store Manager is a web app that helps store owners manage sales and product inve
     <td class="row8">Allows Registered User to Login.</td>
   </tr>
 </table>
+
+## Deployment.
+The API is currently deployed on Heroku.
+[Heroku App](https://store-manager-kelyn-paul.herokuapp.com/)
+
+## Authors
+Kelyn Paul Njeri.
+
+## Credits
+This is part of the Andela Developer Challenge(ADC).
+
+
 
