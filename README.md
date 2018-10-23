@@ -5,6 +5,7 @@
 These endpoints allow a user to perform a variety of functions clearly illustratrated in the table below such as displaying all the products in the inventory among other functions. 
 
 ### API ENDPOINTS
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/81faa37c129dadfd7c74)
 
 
 <table class="tg">
@@ -54,6 +55,9 @@ These endpoints allow a user to perform a variety of functions clearly illustrat
     <td class="row8">Allows Registered User to Login.</td>
   </tr>
 </table>
+
+### Documentation
+[PostMan Docs](https://documenter.getpostman.com/view/5078064/RWgwSGUG)
 
 ## Deployment.
 The API is currently deployed on Heroku.
