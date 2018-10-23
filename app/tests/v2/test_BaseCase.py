@@ -16,6 +16,12 @@ class TestBaseCase(unittest.TestCase):
             "Product Category": "Clothing",
             "Quantity in Inventory": 500
         }
+        self.updated_payload = {
+            "Product Name": "Shoe",
+            "Product Price": 250,
+            "Product Category": "Clothing",
+            "Quantity in Inventory": 500
+        }
         self.sales_payload = {
             "Sold By": "Kelyn",
             "Quantity Sold": 20,

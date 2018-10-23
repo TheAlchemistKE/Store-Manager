@@ -57,21 +57,21 @@ class TestValidInput(unittest.TestCase):
                                     data=json.dumps(payload),
                                     headers={
                                         "Authorization": "Bearer " + self.user_login()},
-                                    contesponse = self.client.get('api/v1/products',
-                                    headers={
-                                        "Authorization": "Bearer " + self.user_login()},
                                     content_type='application/json')
-        self.assertEqual(response.status_code, 200)ent_type='application/json')
         self.assertEqual(response.status_code, 201)
 
     def test_get_products(self):
-        r
+        response = self.client.get('api/v1/products',
+                                   headers={
+                                       "Authorization": "Bearer " + self.user_login()},
+                                   content_type='application/json')
+        self.assertEqual(response.status_code, 200)
 
     def test_get_sales(self):
         response = self.client.get('api/v1/products',
-                                    headers={
-                                        "Authorization": "Bearer " + self.user_login()},
-                                    content_type='application/json')
+                                   headers={
+                                       "Authorization": "Bearer " + self.user_login()},
+                                   content_type='application/json')
         self.assertEqual(response.status_code, 200)
 
     def test_get_one_sales_records(self):
@@ -88,9 +88,9 @@ class TestValidInput(unittest.TestCase):
                                     content_type='application/json')
         self.assertEqual(response.status_code, 201)
         response_data = self.client.get('api/v1/sales',
-                                    headers={
-                                        "Authorization": "Bearer " + self.user_login()},
-                                    content_type='application/json')
+                                        headers={
+                                            "Authorization": "Bearer " + self.user_login()},
+                                        content_type='application/json')
         self.assertEqual(response_data.status_code, 200)
 
     def test_get_one_products(self):
@@ -107,9 +107,9 @@ class TestValidInput(unittest.TestCase):
                                     content_type='application/json')
         self.assertEqual(response.status_code, 201)
         response_data = self.client.get('api/v1/products',
-                                    headers={
-                                        "Authorization": "Bearer " + self.user_login()},
-                                    content_type='application/json')
+                                        headers={
+                                            "Authorization": "Bearer " + self.user_login()},
+                                        content_type='application/json')
         self.assertEqual(response_data.status_code, 200)
 
 
