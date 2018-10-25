@@ -1,7 +1,14 @@
 from flask import Flask, Blueprint
 from instance.config import app_config
 from flask_jwt_extended import JWTManager
+# import os
+# import psycopg2
 
+# url = (dbname=os.getenv("DBNAME"), user=os.getenv("DBUSER"), )
+# def connect_database():
+#     conn = psycopg2.connect(url)
+#     conn.autocommit = True
+#     return conn
 
 
 def create_app(config_name="development"):

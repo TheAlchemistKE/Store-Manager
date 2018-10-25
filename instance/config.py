@@ -12,6 +12,7 @@ class DevelopmentConfig(Config):
 class TestingConfig(Config):
     DEBUG = True
     TESTING = True
+    DATABASE_NAME = "storemanager-tests"
 
 
 app_config = {
