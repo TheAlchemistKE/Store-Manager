@@ -36,6 +36,6 @@ class User():
         result = next(
             (item for item in user_list if item["Username"] == username), False)
         if result == False:
-            return False
+            return {"Message": "User does not exist."}
         return sha256.verify(password, result['Password'])
         

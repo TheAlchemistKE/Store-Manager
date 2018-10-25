@@ -4,7 +4,7 @@ from flask_jwt_extended import jwt_required
 
 # Local Imports
 from ..models.data_models import SalesOps
-from ..utils.validator import input_validator
+# from ..utils.validator import input_validator
 
 sales_obj = SalesOps()
 
@@ -13,8 +13,6 @@ parser.add_argument("Sold By", type=str, required=True,
                     help="Sold By required.")
 parser.add_argument("Quantity Sold", type=int, required=True,
                     help="Quantity Sold required.")
-parser.add_argument("Date Created", type=str, required=True,
-                    help="Date Created required.")
 parser.add_argument("Price per unit", type=int,
                     required=True, help="Price per unit required.")
 
@@ -34,13 +32,12 @@ class SalesList(Resource, SalesOps):
         data = parser.parse_args(strict=True)
         sales_by = data['Sold By']
         quantity_sold = data['Quantity Sold']
-        sales_date = data['Date Created']
         unit_price = data['Price per unit']
 
         resp = {
-            "Message": "Created.",
+            "Message": "New Sales Record Created.",
             "Status": "OK",
-            "Sales Records": sales_obj.save_sales_record(sales_by, quantity_sold, sales_date, unit_price)
+            "Sales Records": sales_obj.save_sales_record(sales_by, quantity_sold, unit_price)
         }
         return make_response(jsonify(resp), 201)
 
@@ -52,7 +49,7 @@ class SingleSaleRecords(Resource):
     @jwt_required
     def get(self, sale_id):
         resp = {
-            "Message": "Successful.",
+            "Message": "Request Successful.",
             "Product": sales_obj.show_one(sale_id)
         }
         return make_response(jsonify(resp), 200)

@@ -1,5 +1,7 @@
 from flask import jsonify, make_response
 from flask_restful import abort
+import datetime as dt
+
 product_list = []
 sales_list = []
 
@@ -35,12 +37,13 @@ class SalesOps():
     def __init__(self):
         self.sales = sales_list
 
-    def save_sales_record(self, sales_by, quantity_sold, sales_date, unit_price):
+    def save_sales_record(self, sales_by, quantity_sold, unit_price):
+
         payload = {
             "Id": len(self.sales)+1,
             "Sold By": sales_by,
             "Quantity Sold": quantity_sold,
-            "Date Created": sales_date,
+            "Date Created": dt.datetime.now(),
             "Price per unit": unit_price,
             "Total": quantity_sold * unit_price
         }
