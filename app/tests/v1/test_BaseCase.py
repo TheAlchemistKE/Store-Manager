@@ -27,10 +27,7 @@ class TestValidInput(unittest.TestCase):
     def tearDown(self):
         self.client = None
         self.content_type = None
-    # def user_register(self):
-
-    #     return json.loads(register.data.decode())["Token"]
-
+        
     def user_login(self):
         x = self.client.post(
             'api/v1/register', data=json.dumps(self.credentials), content_type=self.content_type)

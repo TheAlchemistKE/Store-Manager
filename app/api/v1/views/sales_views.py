@@ -4,7 +4,7 @@ from flask_jwt_extended import jwt_required
 
 # Local Imports
 from ..models.data_models import SalesOps
-# from ..utils.validator import input_validator
+from ..utils.validator import sales_validator
 
 sales_obj = SalesOps()
 

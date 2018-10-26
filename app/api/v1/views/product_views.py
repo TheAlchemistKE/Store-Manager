@@ -4,7 +4,7 @@ from flask_jwt_extended import jwt_required
 
 # Local Imports
 from ..models.data_models import ProductOps
-# from ..utils.validator import input_validator
+from ..utils.validator import product_checker
 
 product_obj = ProductOps()
 
@@ -34,18 +34,19 @@ class ProductList(Resource):
     def post(self):
         data = parser.parse_args()
         name = data["Product Name"]
-        price = data["Product Price"]
+        price = int(data["Product Price"])
         category = data["Product Category"]
         quantity = data["Quantity in Inventory"]
-
-        # Validating User's input.
         resp = {
             "Message": "New Product Created.",
             "Status": "Ok.",
             "Products": product_obj.save_product(name, price, category, quantity)
         }
-        return make_response(jsonify(resp), 201)
+        return resp
 
+
+        # Validating User's input.
+        
 
 class SingleProduct(Resource):
     @jwt_required
