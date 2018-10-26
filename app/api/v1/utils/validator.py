@@ -48,3 +48,5 @@ def login_checker(username, password):
         return make_response(jsonify(msg), 400)
     else:
         return True
+
+def product_checker(product_name, )
